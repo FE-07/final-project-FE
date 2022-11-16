@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <h1 className="text-3xl font-bold underline">Tailwind berhasil terintall</h1>
+      <h1 className="text-3xl font-bold underline">Punya Adit</h1>
     </>
   )
 }
