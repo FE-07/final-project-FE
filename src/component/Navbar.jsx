@@ -6,9 +6,9 @@ const Navbar = () => {
     return (
         <>
             <header className='bg-white drop-shadow-xl'>
-                <nav className='Navbar sm:container mx-auto flex items-center justify-between px-2 md:px-0'>
+                <nav className='Navbar container mx-auto flex items-center justify-between px-2 md:px-0'>
                     <img src={logoAyoBantu} alt="" />
-                    <div className='md:flex items-center gap-8 hidden '>
+                    <div className='flex items-center gap-8'>
                         <Link to=''>Home</Link>
                         <Link to=''>Galang Dana</Link>
                         <Link className='rounded-md px-4 text-white hover:bg-red-100 py-1 bg-sky-600' to=''>Login</Link>
