@@ -8,6 +8,7 @@ function Login() {
   return (
     <>
         <Navbar />
+        
         <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row gap-5 mt-8 items-center">
                 <div className="basis-1/2">
