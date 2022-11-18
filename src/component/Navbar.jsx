@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { logoAyoBantu } from "../assets";
+import { logoAyoBantu, IconUser } from "../assets";
 import "./../css/Navbar.css";
 
 const Navbar = () => {
@@ -8,7 +8,7 @@ const Navbar = () => {
             <header className="bg-white drop-shadow-xl">
                 <nav className="Navbar container mx-auto flex items-center justify-between px-2 md:px-0">
                     <img src={logoAyoBantu} alt="" />
-                    <div className="flex items-center gap-8">
+                    <div className="hidden md:flex items-center gap-8">
                         <Link to="">Home</Link>
                         <Link to="">Galang Dana</Link>
                         <Link
@@ -18,6 +18,9 @@ const Navbar = () => {
                             Login
                         </Link>
                     </div>
+                    <a href="" className="flex md:hidden">
+                        <img src={IconUser} alt="icon-User" />
+                    </a>
                 </nav>
             </header>
         </>
