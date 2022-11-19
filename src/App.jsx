@@ -6,7 +6,8 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 
-import "./index.css";
+import './index.css'
+import BuatCampaign from './pages/BuatCampaign'
 
 function App() {
   return (
@@ -19,6 +20,11 @@ function App() {
 
       <Login />
 
+      {/* <Navbar /> */}
+      
+      {/* <Login /> */}
+      
+      <BuatCampaign />
       {/* <h1 className="text-3xl font-bold bg-sky-300 underline-offset-2">Hello</h1> */}
     </>
   );
