@@ -13,11 +13,11 @@ function App() {
     <>
       <Navbar />
 
-      {/* <Home /> */}
+      <Home />
 
-      <Register />
+      {/* <Register /> */}
 
-      <Login />
+      {/* <Login /> */}
 
       {/* <h1 className="text-3xl font-bold bg-sky-300 underline-offset-2">Hello</h1> */}
     </>
