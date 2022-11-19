@@ -32,33 +32,15 @@ function Login() {
             {/* text input */}
             <div className="flex flex-col gap-5 lg:w-3/4">
               <InputText type="text" placeholder="masukkan username" />
-              <InputText type="password" placeholder="masukkan password" />
-
-              {/* <input
-                className="outline-none bg-slate-100 border border-slate-200 px-3 py-2"
-                type="text"
-                name=""
-                id=""
-                placeholder="username"
-              />
-              <input
-                className="outline-none bg-slate-100 border border-slate-200 px-3 py-2"
-                type="text"
-                name=""
-                id=""
-                placeholder="password"
-              /> */}
-
+              <InputText type="password" placeholder="masukkan password" />\
               <Button
                 name="Login"
                 bgcolor="bg-sky-600"
                 hover="hover:bg-sky-700"
               />
-
               {/* <button className="bg-sky-600 text-white px-2 py-2 rounded-md hover:bg-sky-700">
                 Login
               </button> */}
-
               <div className="text-center">
                 <p>
                   Dont have account?{" "}
