@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 // import image
 import imgLogin from "../assets/login-img.png";
@@ -44,9 +45,9 @@ function Login() {
               <div className="text-center">
                 <p>
                   Dont have account?{" "}
-                  <a href="">
+                  <Link to='/registrasi'>
                     <span className="text-sky-600">Sign Up</span>
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
