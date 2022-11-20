@@ -1,12 +1,6 @@
 import React from "react";
 
-<<<<<<< HEAD
-
-function Button({ name, bgcolor, hover, }) {
-
-=======
 function Button({ name, bgcolor, hover, evt }) {
->>>>>>> dev
   return (
     <>
       <button

@@ -2,12 +2,11 @@ import React, { useEffect } from "react";
 import Button from "../component/Button";
 import homeImage from "../assets/home-img.png";
 import handleNav from '../component/Button';
-import { useNavigate } from "react-router-dom";
 
 import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
-  const navigation = useNavigate();
+  const navigation = useNavigate()
 
   const btnLogin = (evt) => {
     navigation(`${evt}`);
@@ -25,7 +24,7 @@ function Home() {
                 <span className="text-yellow-500" onClick={handleNav}>Brighter Place.</span>
               </p>
               <div className="lg:w-1/4">
-                <Button onClick={handleNav}
+                <Button
                   name="Login"
                   bgcolor="bg-sky-600"
                   hover="hover:bg-sky-700"
