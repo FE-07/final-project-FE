@@ -21,7 +21,9 @@ function App() {
       <Navbar />
       {/* <Login /> */}
       {/* <BuatCampaign /> */}
-      <ListCampaign />
+
+      {/* <ListCampaign /> */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/galangdana" element={<GalangDana />} />
