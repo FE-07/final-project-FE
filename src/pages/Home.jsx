@@ -2,7 +2,15 @@ import React from "react";
 import Button from "../component/Button";
 import homeImage from "../assets/home-img.png";
 
+import { Link, useNavigate } from "react-router-dom";
+
 function Home() {
+  const navigation = useNavigate();
+
+  const btnLogin = (evt) => {
+    navigation(`${evt}`);
+  };
+
   return (
     <>
       <div className="container mx-auto">
@@ -19,6 +27,7 @@ function Home() {
                   name="Login"
                   bgcolor="bg-sky-600"
                   hover="hover:bg-sky-700"
+                  evt={() => btnLogin("login")}
                 />
               </div>
             </div>

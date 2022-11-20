@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 // import image
 import imgLogin from "../assets/login-img.png";
@@ -45,7 +45,7 @@ function Login() {
               <div className="text-center">
                 <p>
                   Dont have account?{" "}
-                  <Link to='/registrasi'>
+                  <Link to="/register">
                     <span className="text-sky-600">Sign Up</span>
                   </Link>
                 </p>
@@ -56,7 +56,6 @@ function Login() {
       </div>
     </>
   );
-
 }
 
 export default Login;
