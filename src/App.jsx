@@ -8,23 +8,26 @@ import Register from "./pages/Register";
 
 import './index.css'
 import BuatCampaign from './pages/BuatCampaign'
+import ListPenggalangan from './pages/ListPenggalangan'
+import ListKosong from "./component/ListKosong";
 
 function App() {
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
 
-      <Home /> */}
+
 
       {/* <Register /> */}
 
-      <Login />
+      {/* <Login /> */}
 
       {/* <Navbar /> */}
-      
+
       {/* <Login /> */}
-      
-      <BuatCampaign />
+      <ListKosong />
+
+      {/* <BuatCampaign /> */}
       {/* <h1 className="text-3xl font-bold bg-sky-300 underline-offset-2">Hello</h1> */}
     </>
   );
