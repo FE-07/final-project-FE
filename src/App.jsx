@@ -6,14 +6,16 @@ import Login from './pages/Login'
 
 import './index.css'
 import BuatCampaign from './pages/BuatCampaign'
+import ListCampaign from './pages/ListCampaign'
 
 function App() {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <Login /> */}
-      <BuatCampaign />
+      {/* <BuatCampaign /> */}
+      <ListCampaign/>
       {/* <h1 className="text-3xl font-bold bg-sky-300 underline-offset-2">Hello</h1> */}
     </>
   )
