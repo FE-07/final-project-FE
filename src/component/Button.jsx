@@ -1,6 +1,8 @@
 import React from "react";
 
-function Button({ name, bgcolor, hover }) {
+
+function Button({ name, bgcolor, hover, }) {
+
   return (
     <>
       <button type="submit"

@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../component/Button";
 import homeImage from "../assets/home-img.png";
+import handleNav from '../component/Button';
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const pindahpage = useNavigate()
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    const handleNav = () => {
+      pindahpage('/login')
+      console.log('oii ini bisa oi')
+    }
+  });
+
   return (
     <>
       <div className="container mx-auto">
@@ -12,10 +24,10 @@ function Home() {
               <p className="text-5xl font-extrabold text-sky-600">Ayo Bantu!</p>
               <p className="text-xl lg:w-3/4">
                 For Youth, By Youth Together We Turn The World Into A{" "}
-                <span className="text-yellow-500">Brighter Place.</span>
+                <span className="text-yellow-500" onClick={handleNav}>Brighter Place.</span>
               </p>
               <div className="lg:w-1/4">
-                <Button
+                <Button onClick={handleNav}
                   name="Login"
                   bgcolor="bg-sky-600"
                   hover="hover:bg-sky-700"

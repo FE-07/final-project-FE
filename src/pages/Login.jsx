@@ -45,7 +45,7 @@ function Login() {
               <div className="text-center">
                 <p>
                   Dont have account?{" "}
-                  <Link to='/registrasi'>
+                  <Link to='/register'>
                     <span className="text-sky-600">Sign Up</span>
                   </Link>
                 </p>
