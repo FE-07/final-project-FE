@@ -20,9 +20,9 @@ const Navbar = () => {
                             Login
                         </Link>
                     </div>
-                    <a href="" className="flex md:hidden">
+                    <Link to="/login" className="flex md:hidden">
                         <img src={IconUser} alt="icon-User" />
-                    </a>
+                    </Link>
                 </nav>
             </header>
         </>

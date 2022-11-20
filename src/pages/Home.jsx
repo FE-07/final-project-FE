@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../component/Button";
 import homeImage from "../assets/home-img.png";
+import handleNav from '../component/Button';
 
 import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
-  const navigation = useNavigate();
+  const navigation = useNavigate()
 
   const btnLogin = (evt) => {
     navigation(`${evt}`);
@@ -20,7 +21,7 @@ function Home() {
               <p className="text-5xl font-extrabold text-sky-600">Ayo Bantu!</p>
               <p className="text-xl lg:w-3/4">
                 For Youth, By Youth Together We Turn The World Into A{" "}
-                <span className="text-yellow-500">Brighter Place.</span>
+                <span className="text-yellow-500" onClick={handleNav}>Brighter Place.</span>
               </p>
               <div className="lg:w-1/4">
                 <Button
