@@ -3,21 +3,21 @@ import StatusReject from "./StatusReject"
 import StatusVerify from "./StatusVerify"
 import { GambarLogin } from "../assets"
 
-const Card = () => {
+const Card = ({ name, ket }) => {
     return (
         <>
-            <div className="flex flex-col md:flex-row xl:flex-row border border-stone-300 rounded-lg overflow-hidden drop-shadow-xl">
+            <div className="w-full flex flex-col md:flex-row xl:flex-row border border-stone-300 rounded-lg overflow-hidden drop-shadow-xl">
                 <img src={GambarLogin} alt="" className="h-48" />
                 <div className="flex flex-col justify-between bg-white w-full p-6">
                     <div className="flex justify-between">
-                        <h1 className="text-xl font-semibold">Campaign Name</h1>
+                        <h1 className="text-xl font-semibold">{name}</h1>
                         <div>
                             {/* <StatusPending /> */}
-                            {/* <StatusReject /> */}
-                            <StatusVerify />
+                            <StatusReject />
+                            {/* <StatusVerify /> */}
                         </div>
                     </div>
-                    <p>Lorem Ipsum</p>
+                    <p>{ket}</p>
                 </div>
             </div>
         </>
