@@ -4,16 +4,14 @@ import homeImage from "../assets/home-img.png";
 import handleNav from '../component/Button';
 import { useNavigate } from "react-router-dom";
 
-function Home() {
-  const pindahpage = useNavigate()
+import { Link, useNavigate } from "react-router-dom";
 
-  useEffect(() => {
-    // Update the document title using the browser API
-    const handleNav = () => {
-      pindahpage('/login')
-      console.log('oii ini bisa oi')
-    }
-  });
+function Home() {
+  const navigation = useNavigate();
+
+  const btnLogin = (evt) => {
+    navigation(`${evt}`);
+  };
 
   return (
     <>
@@ -31,6 +29,7 @@ function Home() {
                   name="Login"
                   bgcolor="bg-sky-600"
                   hover="hover:bg-sky-700"
+                  evt={() => btnLogin("login")}
                 />
               </div>
             </div>

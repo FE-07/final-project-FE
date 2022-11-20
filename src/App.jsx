@@ -6,19 +6,24 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 
-import './index.css'
-import BuatCampaign from './pages/BuatCampaign'
-import ListPenggalangan from './component/ListPenggalangan'
+import "./index.css";
+import BuatCampaign from "./pages/BuatCampaign";
+import ListCampaign from "./pages/ListCampaign";
+import ListPenggalangan from "./component/ListPenggalangan";
 import ListKosong from "./component/ListKosong";
 
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from "react-router-dom";
 import GalangDana from "./pages/GalangDana";
 
 function App() {
   return (
     <>
-
       <Navbar />
+      {/* <Login /> */}
+      {/* <BuatCampaign /> */}
+
+      {/* <ListCampaign /> */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/galangdana" element={<GalangDana />} />
@@ -26,10 +31,6 @@ function App() {
         <Route path="/buatcampaign" element={<BuatCampaign />} />
         <Route path="/register" element={<Register />} />
       </Routes>
-
-
-
-
 
       {/* <Register /> */}
 
