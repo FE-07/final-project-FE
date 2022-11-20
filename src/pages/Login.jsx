@@ -32,7 +32,7 @@ function Login() {
             {/* text input */}
             <div className="flex flex-col gap-5 lg:w-3/4">
               <InputText type="text" placeholder="masukkan username" />
-              <InputText type="password" placeholder="masukkan password" />\
+              <InputText type="password" placeholder="masukkan password" />
               <Button
                 name="Login"
                 bgcolor="bg-sky-600"

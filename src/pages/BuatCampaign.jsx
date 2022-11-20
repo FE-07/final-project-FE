@@ -1,5 +1,7 @@
 import Card from "../component/Card"
 import { ImgDefault } from "../assets"
+import Button from "../component/Button"
+import InputText from "../component/InputText"
 
 const BuatCampaign = () => {
     return (
@@ -13,7 +15,7 @@ const BuatCampaign = () => {
                     <div className="lg:w-1/2">
                         <form action="" className="flex flex-col gap-4 lg:w-3/4">
                             <label htmlFor="Name">Nama Campaign</label>
-                            <input className="outline-none bg-slate-100 border border-slate-200 px-3 py-2" type="text" placeholder="Masukan nama Campaign" />
+                            <InputText type="text" placeholder="masukkan nama campaign" />
                             <label htmlFor="Kategori">Kategori</label>
 
                             {/* input type checkbox */}
@@ -34,6 +36,11 @@ const BuatCampaign = () => {
 
                             <label htmlFor="Deskripsi">Deskripsi</label>
                             <textarea className="outline-none bg-slate-100 border border-slate-200 px-3 py-2" name="" id="" cols="40" rows="6" placeholder="Masukan Deskripsi"></textarea>
+                            <Button
+                                name="Publikasi"
+                                bgcolor="bg-sky-600"
+                                hover="hover:bg-sky-700"
+                            />
                         </form>
                     </div>
                 </div>
