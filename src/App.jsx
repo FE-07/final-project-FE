@@ -6,17 +6,15 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 
-import './index.css'
-import BuatCampaign from './pages/BuatCampaign'
-import ListPenggalangan from './pages/ListPenggalangan'
+import "./index.css";
+import BuatCampaign from "./pages/BuatCampaign";
+import ListPenggalangan from "./pages/ListPenggalangan";
 import ListKosong from "./component/ListKosong";
 
 function App() {
   return (
     <>
       <Navbar />
-
-
 
       {/* <Register /> */}
 
