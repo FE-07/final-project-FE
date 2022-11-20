@@ -8,13 +8,23 @@ import Register from "./pages/Register";
 
 import "./index.css";
 import BuatCampaign from "./pages/BuatCampaign";
-import ListPenggalangan from "./pages/ListPenggalangan";
+import ListPenggalangan from "./component/ListPenggalangan";
 import ListKosong from "./component/ListKosong";
+
+import { Routes, Route } from "react-router-dom";
+import GalangDana from "./pages/GalangDana";
 
 function App() {
   return (
     <>
       <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/galangdana" element={<GalangDana />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/buatcampaign" element={<BuatCampaign />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
 
       {/* <Register /> */}
 
@@ -23,7 +33,7 @@ function App() {
       {/* <Navbar /> */}
 
       {/* <Login /> */}
-      <ListKosong />
+      {/* <ListKosong /> */}
 
       {/* <BuatCampaign /> */}
       {/* <h1 className="text-3xl font-bold bg-sky-300 underline-offset-2">Hello</h1> */}
