@@ -9,7 +9,6 @@ import Register from "./pages/Register";
 import "./index.css";
 import BuatCampaign from "./pages/BuatCampaign";
 import ListCampaign from "./pages/ListCampaign";
-import BuatCampaign from "./pages/BuatCampaign";
 import ListPenggalangan from "./component/ListPenggalangan";
 import ListKosong from "./component/ListKosong";
 
