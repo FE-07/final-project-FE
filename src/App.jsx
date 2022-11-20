@@ -8,6 +8,8 @@ import Register from "./pages/Register";
 
 import "./index.css";
 import BuatCampaign from "./pages/BuatCampaign";
+import ListCampaign from "./pages/ListCampaign";
+import BuatCampaign from "./pages/BuatCampaign";
 import ListPenggalangan from "./component/ListPenggalangan";
 import ListKosong from "./component/ListKosong";
 
@@ -18,7 +20,9 @@ function App() {
   return (
     <>
       <Navbar />
-
+      {/* <Login /> */}
+      {/* <BuatCampaign /> */}
+      <ListCampaign />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/galangdana" element={<GalangDana />} />
