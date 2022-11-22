@@ -4,6 +4,7 @@ import StatusVerify from "./StatusVerify"
 import { GambarLogin } from "../assets"
 
 const Card = ({ name, ket }) => {
+    
     return (
         <>
             <div className="w-full flex flex-col md:flex-row xl:flex-row border border-stone-300 rounded-lg overflow-hidden drop-shadow-xl">
