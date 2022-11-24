@@ -1,10 +1,6 @@
 import React from "react";
 
-function InputText({ title, type, placeholder, id, name }) {
-  const storeInput = (evt) => {
-    console.log(evt);
-  };
-
+function InputText({ title, type, placeholder, id, name, value, onChange }) {
   return (
     <>
       <div className="flex flex-col gap-2">
@@ -15,7 +11,8 @@ function InputText({ title, type, placeholder, id, name }) {
           name={name}
           id={id}
           placeholder={placeholder}
-          onChange={(evt) => storeInput(evt.target.value)}
+          value={value}
+          onChange={onChange}
         />
       </div>
     </>
