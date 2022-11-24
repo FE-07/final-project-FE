@@ -7,6 +7,12 @@ import Button from "../component/Button";
 import banner from "../assets/bannerDaftar.png";
 
 function Register() {
+  const submitForm = (evt) => {
+    evt.preventDefault();
+
+    console.log("Anda sudah submit");
+  };
+
   return (
     <>
       <div className="container mx-auto lg:my-10 my-5 px-5">
@@ -20,54 +26,79 @@ function Register() {
           <Checkbox name={"Penggalang Dana"} />
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-5 justify-between">
-          <div className="basis-1/2">
-            <div className="flex flex-col gap-5">
-              <InputText
-                name={"Username"}
-                type={"text"}
-                placeholder={"masukkan username"}
-              />
-              <InputText
-                name={"Password"}
-                type={"password"}
-                placeholder={"masukkan password"}
-              />
-              <InputText
-                name={"Alamat"}
-                type={"text"}
-                placeholder={"masukkan alamat"}
-              />
-              <InputText
-                name={"Hobi"}
-                type={"text"}
-                placeholder={"masukkan hobi"}
-              />
+        <form action="" onSubmit={submitForm} method="post">
+          <div className="flex flex-col lg:flex-row gap-5 justify-between">
+            <div className="basis-1/2">
+              <div className="flex flex-col gap-5">
+                <InputText
+                  title={"Nama"}
+                  name={"nama"}
+                  type={"text"}
+                  id={"nama"}
+                  placeholder={"masukkan nama lengkap"}
+                />
+                <InputText
+                  title={"Tanggal Lahir"}
+                  type={"date"}
+                  id={"ttl"}
+                  placeholder={"masukkan tanggal lahir"}
+                />
+                <InputText
+                  title={"No Telepon"}
+                  type={"text"}
+                  id={"telp"}
+                  placeholder={"masukkan nomor telepon"}
+                />
+                <InputText
+                  title={"Email"}
+                  type={"email"}
+                  id={"email"}
+                  placeholder={"masukkan email"}
+                />
+                <InputText
+                  title={"Alamat"}
+                  type={"text"}
+                  id={"alamat"}
+                  placeholder={"masukkan alamat"}
+                />
+                <InputText
+                  title={"Username"}
+                  type={"text"}
+                  id={"username"}
+                  placeholder={"masukkan username"}
+                />
+                <InputText
+                  title={"Password"}
+                  type={"password"}
+                  id={"password"}
+                  placeholder={"masukkan password"}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="lg:relative basis-1/4">
-            <div className="flex flex-col gap-3 mb-5">
-              <InputText
-                name={"Berkas 1"}
-                type={"text"}
-                placeholder={"masukkan data"}
-              />
-              <Button name="Upload Berkas" bgcolor="bg-sky-600" />
-            </div>
-            <div className="flex flex-col gap-3">
-              <InputText
-                name={"Berkas 1"}
-                type={"text"}
-                placeholder={"masukkan data"}
-              />
-              <Button name="Upload Berkas" bgcolor="bg-sky-600" />
-            </div>
-            <div className="lg:absolute lg:bottom-0 w-full my-5 lg:my-0">
-              <Button name="Register" bgcolor="bg-teal-600" />
+            <div className="lg:relative basis-1/4">
+              <div className="flex flex-col gap-3 mb-5">
+                <InputText
+                  name={"Berkas 1"}
+                  type={"text"}
+                  placeholder={"masukkan data"}
+                />
+                <Button name="Upload Berkas" bgcolor="bg-sky-600" />
+              </div>
+              <div className="flex flex-col gap-3">
+                <InputText
+                  name={"Berkas 1"}
+                  type={"text"}
+                  placeholder={"masukkan data"}
+                />
+                <Button name="Upload Berkas" bgcolor="bg-sky-600" />
+              </div>
+              <div className="lg:absolute lg:bottom-0 w-full my-5 lg:my-0">
+                <Button name="Register" bgcolor="bg-teal-600" />
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </>
   );
