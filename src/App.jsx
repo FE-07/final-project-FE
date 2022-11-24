@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import Navbar from "./component/Navbar";
 
@@ -15,7 +15,16 @@ import ListKosong from "./component/ListKosong";
 import { Routes, Route } from "react-router-dom";
 import GalangDana from "./pages/GalangDana";
 
+import { users } from "./api";
+
 function App() {
+  // const api = import.meta.env.VITE_APP_API_USERS;
+  // console.log(api);
+
+  useEffect(() => {
+    users();
+  }, []);
+
   return (
     <>
       <Navbar />
