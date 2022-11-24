@@ -15,7 +15,7 @@ const Navbar = () => {
                     </Link>
                     <div className="hidden md:flex items-center gap-8">
                         <Link to="/">Home</Link>
-                        {!isLogin == true ? <Link to="/galangdana">Galang Dana</Link> : <Link to="/login">Galang Dana</Link>}
+                        {!isLogin == true ? <Link to="/galangdana">Campaign</Link> : <Link to="/login">Campaign</Link>}
 
                         <Link
                             className="rounded-md px-4 text-white hover:bg-red-100 py-1 bg-sky-600"
