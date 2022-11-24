@@ -5,12 +5,22 @@ import Checkbox from "../component/Checkbox";
 import Button from "../component/Button";
 
 import banner from "../assets/bannerDaftar.png";
+import { useState } from "react";
 
 function Register() {
+  const [users, setUsers] = useState({});
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setUsers((values) => ({ ...values, [name]: value }));
+  };
+
   const submitForm = (evt) => {
     evt.preventDefault();
 
     console.log("Anda sudah submit");
+    console.log(users);
   };
 
   return (
@@ -32,46 +42,66 @@ function Register() {
               <div className="flex flex-col gap-5">
                 <InputText
                   title={"Nama"}
-                  name={"nama"}
+                  name={"Nama"}
                   type={"text"}
                   id={"nama"}
                   placeholder={"masukkan nama lengkap"}
+                  value={users.nama || ""}
+                  onChange={handleChange}
                 />
                 <InputText
                   title={"Tanggal Lahir"}
+                  name={"ttl"}
                   type={"date"}
                   id={"ttl"}
                   placeholder={"masukkan tanggal lahir"}
+                  value={users.ttl || ""}
+                  onChange={handleChange}
                 />
                 <InputText
+                  name={"telp"}
                   title={"No Telepon"}
                   type={"text"}
                   id={"telp"}
                   placeholder={"masukkan nomor telepon"}
+                  value={users.telp || ""}
+                  onChange={handleChange}
                 />
                 <InputText
+                  name={"email"}
                   title={"Email"}
                   type={"email"}
                   id={"email"}
                   placeholder={"masukkan email"}
+                  value={users.email || ""}
+                  onChange={handleChange}
                 />
                 <InputText
+                  name={"alamat"}
                   title={"Alamat"}
                   type={"text"}
                   id={"alamat"}
                   placeholder={"masukkan alamat"}
+                  value={users.alamat || ""}
+                  onChange={handleChange}
                 />
                 <InputText
+                  name={"username"}
                   title={"Username"}
                   type={"text"}
                   id={"username"}
                   placeholder={"masukkan username"}
+                  value={users.username || ""}
+                  onChange={handleChange}
                 />
                 <InputText
+                  name={"password"}
                   title={"Password"}
                   type={"password"}
                   id={"password"}
                   placeholder={"masukkan password"}
+                  value={users.password || ""}
+                  onChange={handleChange}
                 />
               </div>
             </div>
