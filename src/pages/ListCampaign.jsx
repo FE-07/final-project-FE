@@ -7,9 +7,9 @@ function ListCampaign() {
       {/* Filter */}
       <div className="container mx-auto  bg-white">
         <div className="com-filter  flex flex-row my-5 ">
-          <div className="mx-2 my-5 border border-stone-300 rounded-lg p-1 px-5">Kesehatan</div>
-          <div className="mx-1 my-5 border border-stone-300 p-1 px-5 rounded-lg">Modal Usaha</div>
-          <div className="mx-2 my-5 border border-stone-300 p-1 px-5 rounded-lg">Pendidikan</div>
+          <div className="mx-2 my-5 border border-stone-300 rounded-lg p-1 px-5">Healthy</div>
+          <div className="mx-1 my-5 border border-stone-300 p-1 px-5 rounded-lg">Startup Capital</div>
+          <div className="mx-2 my-5 border border-stone-300 p-1 px-5 rounded-lg">Education</div>
         </div>
         {/* Filter */}
         <div className="flex flex-col my-5 mx-5">
@@ -19,7 +19,7 @@ function ListCampaign() {
             <h1 className="mx-5 py-1 font-bold text-2xl">Campaign name</h1>
             <div className="flex mt-10">
               <button className="mx-3 border rounded-md py-2 px-20 bg-succes-color text-white sm:px-28">
-                Setujui
+                Agree
               </button>
               <button className="mx-2 border rounded-md py-2 px-20 bg-text-first text-white sm:px-28">
                 View
@@ -32,7 +32,7 @@ function ListCampaign() {
             <h1 className="mx-5 py-1 font-bold text-2xl">Campaign name</h1>
             <div className="flex mt-10">
               <button className="mx-3 border rounded-md py-2 px-20 bg-succes-color text-white sm:px-28">
-                Setujui
+                Agree
               </button>
               <button className="mx-2 border rounded-md py-2 px-20 bg-text-first text-white sm:px-28">
                 View
@@ -59,10 +59,10 @@ function ListCampaign() {
                 </p>
                 <div className="flex mt-10 ">
                   <button className="mx-3 border rounded-md py-2 px-20 bg-succes-color text-white sm:px-28">
-                    Setujui
+                    Agree
                   </button>
                   <button className="mx-2 border rounded-md py-2 px-20 bg-alert-color text-white sm:px-28">
-                    Tolak
+                    Rejected
                   </button>
                 </div>
               </div>
