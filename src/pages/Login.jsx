@@ -21,7 +21,7 @@ function Login() {
 
           <div className="basis-1/2 px-4 lg:px-0">
             {/* login title */}
-            <p className="mb-5 text-4xl font-extrabold text-sky-700">Login</p>
+            <p className="mb-5 text-4xl font-bold text-sky-700">Login</p>
             <img className="lg:w-3/4 rounded-md mb-5" src={banner} alt="" />
 
             {/* input type checkbox */}
