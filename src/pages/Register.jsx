@@ -21,6 +21,8 @@ function Register() {
 
     console.log("Anda sudah submit");
     console.log(users);
+
+    reset();
   };
 
   return (
@@ -42,7 +44,7 @@ function Register() {
               <div className="flex flex-col gap-5">
                 <InputText
                   title={"Nama"}
-                  name={"Nama"}
+                  name={"nama"}
                   type={"text"}
                   id={"nama"}
                   placeholder={"masukkan nama lengkap"}
