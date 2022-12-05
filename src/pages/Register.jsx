@@ -10,6 +10,9 @@ import { useState } from "react";
 function Register() {
   const [users, setUsers] = useState({});
 
+  // const 
+  // console.log(useSelector((store) => {console.log(store)}))
+
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -21,8 +24,7 @@ function Register() {
 
     console.log("Anda sudah submit");
     console.log(users);
-
-    reset();
+    
   };
 
   return (
@@ -109,7 +111,7 @@ function Register() {
             </div>
 
             <div className="lg:relative basis-1/4">
-              <div className="flex flex-col gap-3 mb-5">
+              {/* <div className="flex flex-col gap-3 mb-5">
                 <InputText
                   name={"Berkas 1"}
                   type={"text"}
@@ -124,7 +126,7 @@ function Register() {
                   placeholder={"masukkan data"}
                 />
                 <Button name="Upload Berkas" bgcolor="bg-sky-600" />
-              </div>
+              </div> */}
               <div className="lg:absolute lg:bottom-0 w-full my-5 lg:my-0">
                 <Button name="Register" bgcolor="bg-teal-600" />
               </div>
