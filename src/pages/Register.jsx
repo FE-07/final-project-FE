@@ -1,31 +1,72 @@
-import React from "react";
-
-import InputText from "../component/InputText";
+import axios from "axios";
+import { apiusers} from "../api";
 import Checkbox from "../component/Checkbox";
 import Button from "../component/Button";
-
 import banner from "../assets/bannerDaftar.png";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import PropTypes from 'prop-types';
+
 
 function Register() {
-  const [users, setUsers] = useState({});
+  const navigate = useNavigate();
+  const [nama, setNama] = useState("");
+  const [ttl, setTtl] = useState("");
+  const [telp, setTelp] = useState("");
+  const [email, setEmail] = useState("");
+  const [alamat, setAlamat] = useState("");
+  const [uname, setUname] = useState("");
+  const [pass, setPass] = useState("");
 
-  // const 
+  // const users = {
+  //   nama: nama,
+  //   ttl: ttl,
+  //   telp: telp,
+  //   phone: email,
+  //   alamat: alamat,
+  //   email: email,
+  //   username: uname,
+  //   password: pass,
+  // };
+
+  async function RegisUser(nama, ttl, telp, email, alamat, uname, pass) {
+    let res = await axios.post(`${apiusers}`, {
+      nama: nama,
+      ttl: ttl,
+      phone: telp,
+      alamat: alamat,
+      email: email,
+      username: uname,
+      password: pass,
+    });
+    console.log(res);
+
+    if (res.statusText == "Created") {
+      alert('Yeyy sukses')
+      navigate('/login')
+    }
+  }
+  // console.log(res.data)
+
+  // const
   // console.log(useSelector((store) => {console.log(store)}))
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setUsers((values) => ({ ...values, [name]: value }));
-  };
+  // const handleChange = (event) => {
+  //   const name = event.target.name;
+  //   const value = event.target.value;
+  //   setUsers((values) => ({ ...values, [name]: value }));
+  // };
 
   const submitForm = (evt) => {
     evt.preventDefault();
-
+    // RegisUser(users);
+    RegisUser(nama, ttl, telp, email, alamat, uname, pass);
     console.log("Anda sudah submit");
-    console.log(users);
-    
   };
+
+  // const handleNama = (e) => {
+  //   setNama(e.target.value);
+  // }
 
   return (
     <>
@@ -40,72 +81,68 @@ function Register() {
           <Checkbox name={"Penggalang Dana"} />
         </div>
 
-        <form action="" onSubmit={submitForm} method="post">
+        <form action="" onSubmit={submitForm}>
           <div className="flex flex-col lg:flex-row gap-5 justify-between">
             <div className="basis-1/2">
               <div className="flex flex-col gap-5">
-                <InputText
-                  title={"Nama"}
-                  name={"nama"}
-                  type={"text"}
-                  id={"nama"}
-                  placeholder={"masukkan nama lengkap"}
-                  value={users.nama || ""}
-                  onChange={handleChange}
+                <label>Masukan nama lengkap</label>
+                <input
+                  className="outline-none bg-slate-100 border border-slate-200 px-3 py-2"
+                  type="text"
+                  placeholder="masukan nama lengkap"
+                  value={nama}
+                  onChange={(e) => setNama(e.target.value)}
                 />
-                <InputText
-                  title={"Tanggal Lahir"}
-                  name={"ttl"}
-                  type={"date"}
-                  id={"ttl"}
-                  placeholder={"masukkan tanggal lahir"}
-                  value={users.ttl || ""}
-                  onChange={handleChange}
+
+                <label>Tanggal Lahir</label>
+                <input
+                  className="outline-none bg-slate-100 border border-slate-200 px-3 py-2"
+                  type="date"
+                  placeholder="masukan nama lengkap"
+                  value={ttl}
+                  onChange={(e) => setTtl(e.target.value)}
                 />
-                <InputText
-                  name={"telp"}
-                  title={"No Telepon"}
-                  type={"text"}
-                  id={"telp"}
-                  placeholder={"masukkan nomor telepon"}
-                  value={users.telp || ""}
-                  onChange={handleChange}
+
+                <label>No Telepon</label>
+                <input
+                  className="outline-none bg-slate-100 border border-slate-200 px-3 py-2"
+                  type="text"
+                  placeholder="masukan nomor telepon"
+                  value={telp}
+                  onChange={(e) => setTelp(e.target.value)}
                 />
-                <InputText
-                  name={"email"}
-                  title={"Email"}
-                  type={"email"}
-                  id={"email"}
-                  placeholder={"masukkan email"}
-                  value={users.email || ""}
-                  onChange={handleChange}
+                <label>Email</label>
+                <input
+                  className="outline-none bg-slate-100 border border-slate-200 px-3 py-2"
+                  type="email"
+                  placeholder="masukan email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
-                <InputText
-                  name={"alamat"}
-                  title={"Alamat"}
-                  type={"text"}
-                  id={"alamat"}
-                  placeholder={"masukkan alamat"}
-                  value={users.alamat || ""}
-                  onChange={handleChange}
+                <label>Alamat</label>
+                <input
+                  className="outline-none bg-slate-100 border border-slate-200 px-3 py-2"
+                  type="text"
+                  placeholder="masukan Alamat lengkap"
+                  value={alamat}
+                  onChange={(e) => setAlamat(e.target.value)}
                 />
-                <InputText
-                  name={"username"}
-                  title={"Username"}
-                  type={"text"}
-                  id={"username"}
-                  placeholder={"masukkan username"}
-                  value={users.username || ""}
-                  onChange={handleChange}
+                <label>Username</label>
+                <input
+                  className="outline-none bg-slate-100 border border-slate-200 px-3 py-2"
+                  type="text"
+                  placeholder="masukkan username"
+                  value={uname}
+                  onChange={(e) => setUname(e.target.value)}
                 />
-                <InputText
-                  name={"password"}
-                  title={"Password"}
-                  type={"password"}
-                  id={"password"}
-                  placeholder={"masukkan password"}
-                  value={users.password || ""}
-                  onChange={handleChange}
+
+                <label>Password</label>
+                <input
+                  className="outline-none bg-slate-100 border border-slate-200 px-3 py-2"
+                  type="password"
+                  placeholder="masukkan passwoed"
+                  value={pass}
+                  onChange={(e) => setPass(e.target.value)}
                 />
               </div>
             </div>

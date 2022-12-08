@@ -7,7 +7,8 @@ export { PrivateRoute };
 function PrivateRoute({ children }) {
     const display = useSelector((state) => state.user.data || {})
     const {data} = display
-    const user = localStorage.getItem('status') == null ? false : true;
+    const user = localStorage.getItem('status');
+    
 
 
     // useEffect(() => {
@@ -26,7 +27,7 @@ function PrivateRoute({ children }) {
 
     return (
         <>
-            {user ? children  : <Outlet/> }
+            {user !== "Logged in" ?children : <Navigate to='/'/>   }
         </>
     )
 }

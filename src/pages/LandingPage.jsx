@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "../component/Button";
 import homeImage from "../assets/home-img.png";
 import handleNav from '../component/Button';
-import userSlice from "../features/userSlice";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import Footer from "../component/Footer";
+import {useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import ListPenggalangan from "../component/ListPenggalangan";
 
 function LandingPage() {
   const navigate = useNavigate()
@@ -28,7 +29,6 @@ function LandingPage() {
             For Youth, By Youth Together We Turn The World Into A{" "}
             <span className="text-yellow-500" onClick={handleNav}>Brighter Place.</span>
           </p>
-          <Outlet/>
           <div className="lg:w-1/4">
             <Button
               name="Login"
@@ -43,7 +43,11 @@ function LandingPage() {
         <img src={homeImage} alt="" />
       </div>
     </div>
+    <h1 className="text-center text-xl font-extrabold text-sky-600 mt-10">Sahabat yang membutuhkan</h1>
+    <ListPenggalangan/>
   </div>
+  
+  <Footer/>
     </>
   );
 }

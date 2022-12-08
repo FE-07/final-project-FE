@@ -41,7 +41,7 @@ function Login() {
       localStorage.setItem ('Status', "Logged in")
       console.log('login sukses')
       console.log(dispatch(userSlice.actions.getUser( res )));
-      navigate('/')
+      navigate('/home')
     }else{
       alert("anyway ur input wrong email/password bro/sis")  
     }
