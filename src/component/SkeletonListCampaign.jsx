@@ -21,7 +21,7 @@ export const SkeletonListCampaign = () => {
         <div class="h-2 bg-gray-200 rounded-full dark:bg-slate-400 mb-2.5"></div>
         </div>
       </div>
-      <div className="w-full flex flex-col gap-5 md:flex-row xl:flex-row border border-stone-300 rounded-lg overflow-hidden drop-shadow-xl">
+      <div className="w-full flex flex-col md:flex-row xl:flex-row border border-stone-300 rounded-lg overflow-hidden drop-shadow-xl">
         <div className="flex justify-center items-center w-full h-48 bg-slate-400 rounded sm:w-96 dark:bg-slate-400">
           <svg
             className="w-12 h-28 text-gray-200"

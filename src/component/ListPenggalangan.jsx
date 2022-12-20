@@ -33,6 +33,7 @@ const ListPenggalangan = () => {
               <Card
                 name={item.tittle}
                 ket={item.isi}
+                cat={item.Category}
               />
             </div>
           )})

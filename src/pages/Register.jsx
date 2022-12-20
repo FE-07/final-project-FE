@@ -5,7 +5,7 @@ import Button from "../component/Button";
 import banner from "../assets/bannerDaftar.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import PropTypes from 'prop-types';
+
 
 
 function Register() {
@@ -18,16 +18,6 @@ function Register() {
   const [uname, setUname] = useState("");
   const [pass, setPass] = useState("");
 
-  // const users = {
-  //   nama: nama,
-  //   ttl: ttl,
-  //   telp: telp,
-  //   phone: email,
-  //   alamat: alamat,
-  //   email: email,
-  //   username: uname,
-  //   password: pass,
-  // };
 
   async function RegisUser(nama, ttl, telp, email, alamat, uname, pass) {
     let res = await axios.post(`${apiusers}`, {
@@ -43,30 +33,15 @@ function Register() {
 
     if (res.statusText == "Created") {
       alert('Yeyy sukses')
-      navigate('/login')
+
     }
   }
-  // console.log(res.data)
-
-  // const
-  // console.log(useSelector((store) => {console.log(store)}))
-
-  // const handleChange = (event) => {
-  //   const name = event.target.name;
-  //   const value = event.target.value;
-  //   setUsers((values) => ({ ...values, [name]: value }));
-  // };
 
   const submitForm = (evt) => {
     evt.preventDefault();
-    // RegisUser(users);
     RegisUser(nama, ttl, telp, email, alamat, uname, pass);
     console.log("Anda sudah submit");
   };
-
-  // const handleNama = (e) => {
-  //   setNama(e.target.value);
-  // }
 
   return (
     <>

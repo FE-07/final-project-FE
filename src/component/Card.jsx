@@ -3,7 +3,7 @@ import StatusReject from "./StatusReject"
 import StatusVerify from "./StatusVerify"
 import { GambarLogin } from "../assets"
 
-const Card = ({ name, ket }) => {
+const Card = ({ name, ket, cat }) => {
     
     return (
         <>
@@ -12,12 +12,14 @@ const Card = ({ name, ket }) => {
                 <div className="flex flex-col justify-between bg-white w-full p-6">
                     <div className="flex justify-between">
                         <h1 className="text-xl font-semibold">{name}</h1>
+                        
                         <div>
                             {/* <StatusPending /> */}
+                            
                             <StatusVerify />
-                            {/* <StatusVerify /> */}
                         </div>
                     </div>
+                    <p className="">{cat}</p>
                     <p>{ket}</p>
                 </div>
             </div>
